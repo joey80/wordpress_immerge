@@ -1,0 +1,32 @@
+// ===========================================
+// Variables
+// ===========================================
+
+// Media Queries
+$tablet-width: 768px;
+$desktop-width: 1025px;
+
+// Container Sizes
+$container-width: 80%;
+$container-width-max: 1080px;
+
+// Brand Colors
+$primary-color: #31006f;
+$primary-color-light: #6e54a5;
+$primary-color-dark: #28194d;
+$primary-color-muted: #302b3b;
+$primary-color-rgb: (49, 0, 111);
+$secondary-color: #76c043;
+$secondary-color-dark: #488b18;
+
+// Site Colors
+//$text-color: #666;
+$text-color: rgb(102, 102, 102);
+$container-bg: #f7f7f7;
+$text-muted: #bcb5c9;
+$color-success: #28a745;
+$color-danger: #dc3545;
+
+// Focus Styles
+$focus-dark: 2px dotted rgba(255, 255, 255, 0.4);
+$focus-light: 2px dotted rgba(0, 0, 0, 0.4);
