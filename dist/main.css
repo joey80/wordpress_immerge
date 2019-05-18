@@ -263,7 +263,7 @@ a:focus {
   z-index: 9999; }
   .logonav__logo {
     margin: 0 auto;
-    background-image: url(/dist/538bce06abaec3c8c30ed3075d0bbea1.png);
+    background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo--dark_rqobrs.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -314,7 +314,7 @@ a:focus {
       transition: all 0.3s ease-in-out; }
   .logonav__sprout {
     margin: 0 auto;
-    background-image: url(/dist/69899c7fafa3c7eb5866e625b7eca709.png);
+    background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -360,7 +360,7 @@ a:focus {
       font-size: 3rem;
       line-height: 0.5; }
   .hero__dirt {
-    background-image: url(/dist/a685fd1401609182b021cde212852e3d.png);
+    background-image: url(/dista685fd1401609182b021cde212852e3d.png);
     width: 1000px;
     height: 314px;
     background-size: contain;
@@ -372,7 +372,7 @@ a:focus {
   margin: -150px auto 0 auto;
   width: 80%;
   max-width: 1080px;
-  background-image: url(/dist09b80f01ee8961a781132df04e1f0d1d.png);
+  background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/handLeaf_ijefhg.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 40%; }
