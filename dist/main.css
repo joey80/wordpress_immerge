@@ -360,7 +360,7 @@ a:focus {
       font-size: 3rem;
       line-height: 0.5; }
   .hero__dirt {
-    background-image: url(/dista685fd1401609182b021cde212852e3d.png);
+    background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/dirt_pkrgyk.png");
     width: 1000px;
     height: 314px;
     background-size: contain;
