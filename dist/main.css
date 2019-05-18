@@ -263,7 +263,7 @@ a:focus {
   z-index: 9999; }
   .logonav__logo {
     margin: 0 auto;
-    background-image: url(/dist538bce06abaec3c8c30ed3075d0bbea1.png);
+    background-image: url(/dist/538bce06abaec3c8c30ed3075d0bbea1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -314,7 +314,7 @@ a:focus {
       transition: all 0.3s ease-in-out; }
   .logonav__sprout {
     margin: 0 auto;
-    background-image: url(/dist69899c7fafa3c7eb5866e625b7eca709.png);
+    background-image: url(/dist/69899c7fafa3c7eb5866e625b7eca709.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -360,7 +360,7 @@ a:focus {
       font-size: 3rem;
       line-height: 0.5; }
   .hero__dirt {
-    background-image: url(/dista685fd1401609182b021cde212852e3d.png);
+    background-image: url(/dist/a685fd1401609182b021cde212852e3d.png);
     width: 1000px;
     height: 314px;
     background-size: contain;
