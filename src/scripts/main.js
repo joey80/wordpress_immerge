@@ -1,10 +1,3 @@
-// import { lazyLoad } from './components/mod1/mod1';
-
-// const divTargets = Array.from(document.querySelectorAll('.lazy_img'));
-// divTargets.forEach((elm) => {
-//     lazyLoad(elm);
-// });
-
 // import local dependencies
 import '../styles/main.scss';
 import Router from './util/Router';

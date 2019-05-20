@@ -1,0 +1,27 @@
+.modal {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 1000px rgba(0,0,0,0.8);
+    display: none;
+    height: 80%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 999999;
+
+    &__close {
+        color: #000;
+        padding: 2rem;
+        background-color: #fff;
+        cursor: pointer;
+        //font-family: 'Font Awesome 5 Free';
+    }
+
+    &--show {
+        display: block;
+    }
+}

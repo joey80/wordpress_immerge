@@ -1,10 +1,11 @@
 .hero {
-    height: 600px;
+    height: 500px;
     background-size: cover;
-    background-color: #225007;
+    background-color: #54bb19;
+    //background-color: #225007;
     background-position: left;
     background-attachment: fixed;
-    background-blend-mode: screen;
+    background-blend-mode: overlay;
     width: 100%;
 
     &__content {
