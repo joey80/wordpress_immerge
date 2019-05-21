@@ -17,14 +17,11 @@ export function lazyLoadImages(array) {
     return array;
 };
 
-export function createModal(elm) {
-    const modal = document.querySelector('.modal');
+export function createModal(elm, modal) {
     const modalClose = document.querySelector('.modal__close');
     const modalTitle = document.querySelector('.modal__title');
 
     modal.classList.add('modal--show');
-    modal.style.backgroundImage = `url(${elm.dataset.src})`;
-
     modalTitle.innerHTML = elm.dataset.alt;
 
     modalClose.addEventListener('click', () => {
@@ -32,10 +29,26 @@ export function createModal(elm) {
     });
 };
 
+export function addModalImage(elm, modal) {
+    modal.style.backgroundImage = `url(${elm.dataset.src})`;
+};
+
+export function scrollToModal() {
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: 500
+    });
+};
+
 export function eventListenerInit(array) {
+    const modal = document.querySelector('.modal');
+
     array.forEach((elm) => {
-        elm.addEventListener('click', (event) => {
-            createModal(elm);
+        elm.addEventListener('click', () => {
+            createModal(elm, modal);
+            addModalImage(elm, modal);
+            scrollToModal();
         });
     });
 
