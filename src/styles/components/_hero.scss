@@ -1,5 +1,5 @@
 .hero {
-    height: 500px;
+    height: 700px;
     background-size: cover;
     background-color: #477516;
     background-position: left;
@@ -12,13 +12,9 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        padding: 0 2rem 2rem 0;
+        padding: 0 2rem 7rem 0;
         width: 100%;
         height: 100%;
-        //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAEUlEQVQYlWNgIAwaRhUQpwAA5+sEgf5NoKQAAAAASUVORK5CYII=");
-        //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC");
-        //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAEElEQVQYlWNgoBJoGFXAAABDawQBDP8DNgAAAABJRU5ErkJggg==");
-        //background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVQIW2NkYGD4z8DAwMjIAAUADikBA/ggJToAAAAASUVORK5CYII=");
 
         & h1 {
             color: #fff;
@@ -32,15 +28,5 @@
             font-size: 3rem;
             line-height: 0.5;
         }
-    }
-
-    &__dirt {
-        background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/dirt_pkrgyk.png");
-        width: 1000px;
-        height: 314px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        transform: translate(-100px, -180px);
     }
 }

@@ -16,7 +16,7 @@ export function lazyLoad(source, type) {
                 
                 switch (type) {
                     case 'img':
-                        source.setAttribute('src', source);
+                        source.setAttribute('src', imgSource);
                         break;
                     case 'bg':
                         source.style.backgroundImage = `url(${imgSource})`;
@@ -31,6 +31,6 @@ export function lazyLoad(source, type) {
     });
 
     io.observe(source);
-};
+}
 
 export default { lazyLoad };

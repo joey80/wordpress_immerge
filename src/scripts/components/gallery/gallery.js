@@ -1,4 +1,5 @@
 import { lazyLoad } from '../../util/LazyLoad';
+import { Coordinates } from '../../util/Coordinates';
 
 // Check the parent or grandparent of the target div
 export function getDataSrc(elm) {
@@ -33,22 +34,25 @@ export function addModalImage(elm, modal) {
     modal.style.backgroundImage = `url(${elm.dataset.src})`;
 };
 
-export function scrollToModal() {
+export function scrollToModal(modal) {
+    const top = Coordinates(modal);
+
     window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: 500
+        top: top.y - 10
     });
 };
 
 export function eventListenerInit(array) {
     const modal = document.querySelector('.modal');
+    const gallery = document.querySelector('.gallery');
 
     array.forEach((elm) => {
         elm.addEventListener('click', () => {
             createModal(elm, modal);
             addModalImage(elm, modal);
-            scrollToModal();
+            scrollToModal(gallery);
         });
     });
 
