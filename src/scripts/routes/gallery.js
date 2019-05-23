@@ -1,5 +1,7 @@
+import { gallery } from '../components/gallery/gallery';
+
 export default {
     init() {
-      console.log('gallery page');
+      gallery();
     },
 };

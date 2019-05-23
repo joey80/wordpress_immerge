@@ -1,11 +1,7 @@
 .app {
-    margin: -150px auto 0 auto;
+    margin: 0 auto;
     width: $container-width;
     max-width: $container-width-max;
-    background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/handLeaf_ijefhg.png");
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: 40%;
 
     &__title {
         font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
