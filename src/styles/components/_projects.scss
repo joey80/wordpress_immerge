@@ -8,6 +8,7 @@
         display: flex;
         justify-content: space-between;
         padding-left: 2rem;
+        opacity: 0;
         position: absolute;
         transform: translateY(-100px);
         transition: all 1s ease-in-out;
@@ -65,19 +66,20 @@
             }
         }
 
-        &--hide-first {
+        &--hide-right {
             opacity: 0;
             transform: translate(2000px, -100px);
             transition: all 1s ease-in-out;
         }
 
-        &--hide-last {
+        &--hide-left {
             opacity: 0;
             transform: translate(-2000px, -100px);
             transition: all 1s ease-in-out;
         }
 
         &--display {
+            opacity: 1;
             transform: translate(0, -100px);
             transition: all 1s ease-in-out;
         }

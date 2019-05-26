@@ -1,16 +1,14 @@
 import { lazyLoad } from '../../util/LazyLoad';
 import { Coordinates } from '../../util/Coordinates';
+import { classBody } from '@babel/types';
 
-// Check the parent or grandparent of the target div
-export function getDataSrc(elm) {
-    if (elm.parentNode.dataset.src != null) {
-        return elm.parentNode.dataset.src;
-    } else {
-        return elm.parentNode.parentNode.dataset.src;
-    }
+export function gallery() {
+    const items = Array.from(document.querySelectorAll('.gallery__item'));
+    lazyLoadImages(items);
+    eventListenerInit(items);
 };
 
-export function lazyLoadImages(array) {
+const lazyLoadImages = (array) => {
     array.forEach((elm) => {
         lazyLoad(elm, elm.dataset.type);
     });
@@ -18,7 +16,7 @@ export function lazyLoadImages(array) {
     return array;
 };
 
-export function createModal(elm, modal) {
+const createModal = (elm, modal) => {
     const modalClose = document.querySelector('.modal__close');
     const modalTitle = document.querySelector('.modal__title');
 
@@ -30,11 +28,11 @@ export function createModal(elm, modal) {
     });
 };
 
-export function addModalImage(elm, modal) {
+const addModalImage = (elm, modal) => {
     modal.style.backgroundImage = `url(${elm.dataset.src})`;
 };
 
-export function scrollToModal(modal) {
+const scrollToModal = (modal) => {
     const top = Coordinates(modal);
 
     window.scroll({
@@ -44,7 +42,7 @@ export function scrollToModal(modal) {
     });
 };
 
-export function eventListenerInit(array) {
+const eventListenerInit = (array) => {
     const modal = document.querySelector('.modal');
     const gallery = document.querySelector('.gallery');
 
@@ -57,12 +55,6 @@ export function eventListenerInit(array) {
     });
 
     return array;
-};
-
-export function gallery() {
-    const items = Array.from(document.querySelectorAll('.gallery__item'));
-    lazyLoadImages(items);
-    eventListenerInit(items);
 };
 
 export default { gallery };
