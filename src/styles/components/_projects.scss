@@ -4,6 +4,14 @@
     height: 500px;
     width: 100%;
 
+    @include tablet {
+        height: 400px;
+    }
+
+    @include desktop {
+        height: 500px;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -31,13 +39,30 @@
             }
 
             &:nth-of-type(1) {
+                transform: translateY(10px);
                 width: 23%;
+
+                @include tablet {
+                    transform: translateY(-30px);
+                }
+
+                @include desktop {
+                    transform: translateY(10px);
+                }
             }
 
             &:nth-of-type(2) {
                 opacity: 1;
                 padding-top: 1rem;
                 transform: translateX(0);
+
+                @include tablet {
+                    transform: translateY(-40px);
+                }
+
+                @include desktop {
+                    transform: translateX(0);
+                }
             }
 
             &:nth-of-type(3) {
@@ -49,17 +74,44 @@
                 transform: translateY(-161px);
                 transition: all 0.4s ease-in-out;
                 width: 35%;
+
+                @include tablet {
+                    height: 260px;
+                    transform: translateY(-161px);
+                }
+
+                @include desktop {
+                    height: 360px;
+                }
             }
 
             & h3 {
                 font-size: 3.5rem;
-                line-height: 0.5;
+                line-height: 0.3;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
+
+                @include desktop {
+                    font-size: 3.5rem;
+                    line-height: 0.5;
+                }
             }
 
             & h4 {
                 font-size: 3.5rem;
                 font-weight: bold;
-                line-height: 0.5;
+                line-height: 0.3;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
+
+                @include desktop {
+                    font-size: 3.5rem;
+                    line-height: 0.5;
+                }
             }
 
             &__gradient {
@@ -74,8 +126,26 @@
                 position: absolute;
                 top: 180px;
 
+                @include tablet {
+                    left: 10px;
+                    top: 140px;
+                }
+
+                @include desktop {
+                    left: -30px;
+                    top: 180px;
+                }
+
                 & img {
                     max-width: 300px;
+
+                    @include tablet {
+                        max-width: 100px;
+                    }
+
+                    @include desktop {
+                        max-width: 300px;
+                    }
                 }
             }
         }
@@ -85,9 +155,18 @@
         display: block;
         font-style: italic;
         line-height: 1.5;
-        margin-top: 0.6rem;
+        margin-top: 0.2rem;
         opacity: 0;
         transform: translateX(1000px);
+
+        @include tablet {
+            font-size: 0.7rem;
+        }
+
+        @include desktop {
+            font-size: 1rem;
+            margin-top: 0.6rem;
+        }
     }
 
     &__dirt {
@@ -106,6 +185,14 @@
         border-radius: 3px;
         font-size: 0.7rem;
         padding: 0.1rem 0.5rem;
+
+        @include tablet {
+            font-size: 0.5rem;
+        }
+
+        @include desktop {
+            font-size: 0.7rem;
+        }
     }
 
     &__tags {
@@ -118,9 +205,18 @@
         display: block;
         font-size: 1.2rem;
         font-weight: bold;
-        line-height: 1;
+        line-height: 0.4;
         opacity: 0;
         transform: translateX(1000px);
+
+        @include tablet {
+            font-size: 0.8rem;
+        }
+
+        @include desktop {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
     }
 
     &--show {

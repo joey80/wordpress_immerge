@@ -11,6 +11,7 @@ export function projects() {
     setInterval(timeIt, 5000);
 };
 
+// Controls what gets moved
 const timeIt = () => {
     i = i % containers_length;
     if (i === containers_length - 1 ? next = 0 : next = i + 1);
@@ -19,6 +20,7 @@ const timeIt = () => {
     i++;
 };
 
+// Controls how it gets moved
 const moveIt = () => {
     const parallaxArray1 = Array.from(containers[i].children[1].children);
     const parallaxArray2 = Array.from(containers[next].children[1].children);
@@ -34,16 +36,18 @@ const moveIt = () => {
     }, 200);
 };
 
+// Shows the middle project section
 const showMiddleSection = (array) => {
     let randomInt = 0.4;
 
     array.forEach((elm) => {
         elm.style.transition = `all ${randomInt}s cubic-bezier(0.000, 0.500, 0.000, 1.075)`;
         elm.classList.add('projects--show');
-        randomInt += 0.4;
+        randomInt += 0.2;
     });
 };
 
+// Hides the middle project section
 const hideMiddleSection = (array) => {
     array.forEach((elm) => {
         elm.classList.remove('projects--show');

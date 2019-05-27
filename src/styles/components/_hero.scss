@@ -1,11 +1,19 @@
 .hero {
-    height: 700px;
+    height: 500px;
     background-size: cover;
     background-color: #477516;
     background-position: left;
     background-attachment: fixed;
     background-blend-mode: soft-light;
     width: 100%;
+
+    @include tablet {
+        height: 400px;
+    }
+
+    @include desktop {
+        height: 700px;
+    }
 
     &__content {
         display: flex;
@@ -18,15 +26,23 @@
 
         & h1 {
             color: #fff;
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
             line-height: 0.5;
+
+            @include tablet {
+                font-size: 4rem;
+            }
         }
 
         & h2 {
             color: #fff;
-            font-size: 3rem;
+            font-size: 2rem;
             line-height: 0.5;
+
+            @include tablet {
+                font-size: 3rem;
+            }
         }
     }
 }
