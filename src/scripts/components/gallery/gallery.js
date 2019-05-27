@@ -1,6 +1,5 @@
 import { lazyLoad } from '../../util/LazyLoad';
 import { Coordinates } from '../../util/Coordinates';
-import { classBody } from '@babel/types';
 
 export function gallery() {
     const items = Array.from(document.querySelectorAll('.gallery__item'));
