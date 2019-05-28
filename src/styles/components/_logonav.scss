@@ -3,8 +3,10 @@
     background-color: #fff;
     height: 400px;
     width: 100%;
-    box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
-    transition: all 1s cubic-bezier(0.75, -0.5, 0, 1.75);
+    //box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    //transition: transform 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
+    transition: transform 0.3s ease-in-out;
     z-index: 9999;
 
     @include tablet {
@@ -17,25 +19,28 @@
         justify-content: center;
         opacity: 1;
         text-transform: capitalize;
-        transform: translateY(0) scale(1);
-        transition: all 0.7s ease-in-out;
+        transform: translate3d(0,0,0) scale(1);
+        //transition: all 0.7s ease-in-out;
+        transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
+
+        @include tablet {
+            transform: translate3d(0,0,0) scale(1);
+        }
 
         & ul {
             list-style-type: none;
             padding: 0;
-            margin: 2rem 0 0 0;
             text-align: center;
 
             @include tablet {
                 padding: initial;
-                margin: initial;
                 text-align: initial;
             }
         }
 
         & li {
             display: block;
-            margin: 0 auto;
+            margin: 0 auto 0.3rem auto;
 
             @include tablet {
                 display: inline-block;
@@ -46,10 +51,14 @@
                 position: relative;
                 color: #000;
                 font-weight: 700;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 text-decoration: none;
                 transition: all 0.3s ease-in-out;
                 text-transform: uppercase;
+
+                @include tablet {
+                    font-size: 0.8rem;
+                }
 
                 &::before {
                     content: "";
@@ -77,54 +86,75 @@
             }
 
             &:first-child {
-                transform: translateY(6px);
+                transform: translate3d(0,6px,0);
+            }
+
+            & img {
+                width: 150px;
+                height: 39px;
+                margin-bottom: 1rem;
+
+                @include tablet {
+                    width: 100px;
+                    height: 26px;
+                    margin: 0;
+                }
             }
         }
 
         &--hide {
             opacity: 0;
-            transform: translateY(-70px) scale(3);
-            transition: all 0.5s ease-in-out;
+            transform: translate3d(0,-100px,0) scale(0);
+            //transition: all 0.5s ease-in-out;
+            transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
+
+            @include tablet {
+                transform: translate3d(0,-70px,0) scale(3);
+            }
         }
     }
 
     &__sprout {
-        margin: 0 auto;
+        display: inline-block;
+        position: absolute;
         background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         width: 100px;
         height: 100px;
+        left: 50%;
+        transform: translateX(-50%) translateY(30px) rotate(0deg);
         border-radius: 50%;
-        transform: translateY(100px) rotate(0deg);
         transition: all 0.3s ease-in-out;
 
         @include tablet {
             width: 120px;
             height: 120px;
-            transform: translateY(-20px) rotate(0deg);
+            transform: translateX(-50%) translateY(-10px) rotate(0deg);
         }
 
         &:hover {
             cursor: pointer;
-            transform: translateY(100px) rotate(20deg);
+            transform: translateX(-50%) translateY(30px) rotate(20deg);
             box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
 
             @include tablet {
-                transform: translateY(-20px) rotate(20deg); 
+                transform: translateX(-50%) translateY(-10px) rotate(20deg); 
             }
         }
     }
 
     &--hide {
-        box-shadow: none;
+        //box-shadow: none;
         transform: translateY(-380px);
-        transition: all 1s cubic-bezier(0.75, -0.5, 0, 1.75);
+        transition: transform 0.3s ease-in-out;
+        //transition: transform 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
 
         @include tablet {
             transform: translateY(-60px);
+            -webkit-transition: transform ease-in-out 2s;
             transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
         }
     }
