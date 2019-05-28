@@ -262,12 +262,12 @@ a:focus {
   height: 400px;
   width: 100%;
   transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.1);
   z-index: 9999; }
   @media (min-width: 768px) {
     .logonav {
       height: 80px;
-      transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75); } }
+      transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.1); } }
   .logonav__nav {
     display: flex;
     justify-content: center;
@@ -342,6 +342,7 @@ a:focus {
           transform: translate3d(0, -70px, 0) scale(3); } }
   .logonav__sprout {
     display: inline-block;
+    position: absolute;
     background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
     background-size: contain;
     background-position: center;
@@ -349,9 +350,9 @@ a:focus {
     width: 100px;
     height: 100px;
     left: 50%;
-    transform: translateX(-50%) translateY(30px) rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
     border-radius: 50%;
-    transition: all 0.3s ease-in-out; }
+    transition: transform 0.3s ease-in-out; }
     @media (min-width: 768px) {
       .logonav__sprout {
         width: 120px;
@@ -359,7 +360,7 @@ a:focus {
         transform: translateX(-50%) translateY(-10px) rotate(0deg); } }
     .logonav__sprout:hover {
       cursor: pointer;
-      transform: translateX(-50%) translateY(30px) rotate(20deg);
+      transform: translateX(-50%) rotate(20deg);
       box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
       transition: all 0.3s ease-in-out; }
       @media (min-width: 768px) {
@@ -367,17 +368,16 @@ a:focus {
           transform: translateX(-50%) translateY(-10px) rotate(20deg); } }
   .logonav--hide {
     transform: translateY(-380px);
-    transition: transform 0.3s ease-in-out; }
+    transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.75); }
     @media (min-width: 768px) {
       .logonav--hide {
         transform: translateY(-60px);
-        -webkit-transition: transform ease-in-out 2s;
-        transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75); } }
+        transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.75); } }
 
 .hero {
-  height: 500px;
+  height: 400px;
   background-size: 700px 500px;
-  background-color: #477516;
+  background-color: #72964c;
   background-position: top center;
   background-attachment: fixed;
   background-blend-mode: soft-light;
@@ -387,10 +387,7 @@ a:focus {
     .hero {
       background-position: left;
       background-size: cover;
-      height: 400px; } }
-  @media (min-width: 1025px) {
-    .hero {
-      height: 700px; } }
+      height: 500px; } }
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -398,7 +395,8 @@ a:focus {
     align-items: flex-end;
     padding: 0 2rem 7rem 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    text-shadow: 2px 2px 2px rgba(7, 85, 13, 0.2); }
     .hero__content h1 {
       color: #fff;
       font-size: 3rem;
@@ -530,18 +528,17 @@ a:focus {
   display: none;
   height: 500px;
   left: 50%;
-  position: absolute;
+  top: 20px;
+  position: fixed;
   transform: translateX(-50%);
-  width: 100%;
+  width: 95%;
   z-index: 999999; }
   @media (min-width: 768px) {
     .modal {
-      height: 600px;
-      width: 100%; } }
+      height: 600px; } }
   @media (min-width: 1025px) {
     .modal {
-      height: 700px;
-      width: 90%; } }
+      height: 700px; } }
   .modal__close {
     background-color: #fff;
     border-radius: 5px;
