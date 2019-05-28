@@ -342,7 +342,6 @@ a:focus {
           transform: translate3d(0, -70px, 0) scale(3); } }
   .logonav__sprout {
     display: inline-block;
-    position: absolute;
     background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
     background-size: contain;
     background-position: center;
