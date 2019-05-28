@@ -8,19 +8,18 @@
     display: none;
     height: 500px;
     left: 50%;
-    position: absolute;
+    top: 20px;
+    position: fixed;
     transform: translateX(-50%);
-    width: 100%;
+    width: 95%;
     z-index: 999999;
 
     @include tablet {
         height: 600px;
-        width: 100%;
     }
 
     @include desktop {
         height: 700px;
-        width: 90%;
     }
 
     &__close {

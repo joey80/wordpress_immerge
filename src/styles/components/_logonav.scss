@@ -5,13 +5,12 @@
     width: 100%;
     //box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
     transform: translateY(0);
-    //transition: transform 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.1);
     z-index: 9999;
 
     @include tablet {
         height: 80px;
-        transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+        transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.1);
     }
 
     &__nav {
@@ -20,7 +19,6 @@
         opacity: 1;
         text-transform: capitalize;
         transform: translate3d(0,0,0) scale(1);
-        //transition: all 0.7s ease-in-out;
         transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
 
         @include tablet {
@@ -105,7 +103,6 @@
         &--hide {
             opacity: 0;
             transform: translate3d(0,-100px,0) scale(0);
-            //transition: all 0.5s ease-in-out;
             transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
 
             @include tablet {
@@ -116,7 +113,7 @@
 
     &__sprout {
         display: inline-block;
-        //position: absolute;
+        position: absolute;
         background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
         background-size: contain;
         background-position: center;
@@ -124,9 +121,9 @@
         width: 100px;
         height: 100px;
         left: 50%;
-        transform: translateX(-50%) translateY(30px) rotate(0deg);
+        transform: translateX(-50%) rotate(0deg);
         border-radius: 50%;
-        transition: all 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
 
         @include tablet {
             width: 120px;
@@ -136,7 +133,7 @@
 
         &:hover {
             cursor: pointer;
-            transform: translateX(-50%) translateY(30px) rotate(20deg);
+            transform: translateX(-50%) rotate(20deg);
             box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
 
@@ -147,15 +144,12 @@
     }
 
     &--hide {
-        //box-shadow: none;
         transform: translateY(-380px);
-        transition: transform 0.3s ease-in-out;
-        //transition: transform 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
+        transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.75);
 
         @include tablet {
             transform: translateY(-60px);
-            -webkit-transition: transform ease-in-out 2s;
-            transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+            transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.75);
         }
     }
 }
