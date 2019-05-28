@@ -1,26 +1,46 @@
 .logonav {
     position: fixed;
     background-color: #fff;
-    height: 80px;
+    height: 400px;
     width: 100%;
     box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
-    transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+    transition: all 1s cubic-bezier(0.75, -0.5, 0, 1.75);
     z-index: 9999;
+
+    @include tablet {
+        height: 80px;
+        transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+    }
 
     &__nav {
         display: flex;
         justify-content: center;
+        opacity: 1;
         text-transform: capitalize;
         transform: translateY(0) scale(1);
         transition: all 0.7s ease-in-out;
 
         & ul {
             list-style-type: none;
+            padding: 0;
+            margin: 2rem 0 0 0;
+            text-align: center;
+
+            @include tablet {
+                padding: initial;
+                margin: initial;
+                text-align: initial;
+            }
         }
 
         & li {
-            display: inline-block;
-            margin: 0 1rem;
+            display: block;
+            margin: 0 auto;
+
+            @include tablet {
+                display: inline-block;
+                margin: 0 1rem;
+            }
 
             & a {
                 position: relative;
@@ -62,6 +82,7 @@
         }
 
         &--hide {
+            opacity: 0;
             transform: translateY(-70px) scale(3);
             transition: all 0.5s ease-in-out;
         }
@@ -73,23 +94,38 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        transform: translateY(-20px) rotate(0deg);
+        transform: translateY(100px) rotate(0deg);
         transition: all 0.3s ease-in-out;
+
+        @include tablet {
+            width: 120px;
+            height: 120px;
+            transform: translateY(-20px) rotate(0deg);
+        }
 
         &:hover {
             cursor: pointer;
-            transform: translateY(-20px) rotate(20deg);
+            transform: translateY(100px) rotate(20deg);
             box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
+
+            @include tablet {
+                transform: translateY(-20px) rotate(20deg); 
+            }
         }
     }
 
     &--hide {
         box-shadow: none;
-        transform: translateY(-60px);
-        transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+        transform: translateY(-380px);
+        transition: all 1s cubic-bezier(0.75, -0.5, 0, 1.75);
+
+        @include tablet {
+            transform: translateY(-60px);
+            transition: all 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+        }
     }
 }

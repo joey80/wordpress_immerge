@@ -3,6 +3,14 @@
     width: $container-width;
     max-width: $container-width-max;
 
+    @include tablet {
+        width: 90%;
+    }
+
+    @include desktop {
+        width: $container-width;
+    }
+
     &__title {
         font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
         display: inline-block;
