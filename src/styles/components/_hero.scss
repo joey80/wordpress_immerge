@@ -1,13 +1,16 @@
 .hero {
     height: 500px;
-    background-size: cover;
+    background-size: 700px 500px;
     background-color: #477516;
-    background-position: left;
+    background-position: top center;
     background-attachment: fixed;
     background-blend-mode: soft-light;
+    background-repeat: no-repeat;
     width: 100%;
 
     @include tablet {
+        background-position: left;
+        background-size: cover;
         height: 400px;
     }
 
