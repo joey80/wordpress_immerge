@@ -14,7 +14,7 @@ export default {
   init() {
     lazyLoadImages();
     nav();
-    projects();
+    //projects();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
