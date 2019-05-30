@@ -25,31 +25,37 @@ $the_query = new WP_Query( $args );
             data-type="bg"
             data-src="http://100.26.102.174/wp-content/uploads/2019/05/bg.jpg">
             <div class="staff__upper">
-                <div class="staff__image__container">
-                    <div class="staff__image">
-                        <div
-                            class="staff__image__front immerge_lazy"
-                            data-type="bg"
-                            data-src="<?php the_field('picture1'); ?>"
-                            data-alt="<?php the_field('first_name'); ?>">
-                        </div>
-                        <div
-                            class="staff__image__back immerge_lazy"
-                            data-type="bg"
-                            data-src="<?php the_field('picture2'); ?>"
-                            data-alt="<?php the_field('first_name'); ?>">
-                        </div>
-                    </div>
-                </div>
                 <div class="staff__content">
-                    <span class="staff__content__name"><?php the_field('first_name')?> <?php the_field('last_name'); ?></span>
-                    <span class="staff__content__title"><?php the_field('title') ?></span>
-                    <hr />
                     <span class="staff__content__bio">
+                        <div class="staff__image__container">
+                            <div class="staff__image">
+                                <div
+                                    class="staff__image__front immerge_lazy"
+                                    data-type="bg"
+                                    data-src="<?php the_field('picture1'); ?>"
+                                    data-alt="<?php the_field('first_name'); ?>">
+                                </div>
+                                <div
+                                    class="staff__image__back immerge_lazy"
+                                    data-type="bg"
+                                    data-src="<?php the_field('picture2'); ?>"
+                                    data-alt="<?php the_field('first_name'); ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="staff__content__name"><?php the_field('first_name')?> <?php the_field('last_name'); ?></span>
+                        <span class="staff__content__title"><?php the_field('title') ?></span>
+                        <hr />
                         <?php the_field('bio') ?>
                     </span>
                 </div>
             </div>
+            <?php if( get_field('email') ): ?>
+                <div class="staff__badge">
+                    <span><?php the_field('phone'); ?></span>
+                    <span><?php the_field('email'); ?></span>
+                </div>
+            <?php endif; ?>
             <div class="staff__container__facts">
                 <?php the_field('fun_facts') ?>
             </div>

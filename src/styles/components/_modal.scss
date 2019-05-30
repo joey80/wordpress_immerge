@@ -9,6 +9,7 @@
     height: 500px;
     left: 50%;
     top: 20px;
+    max-width: $container-width-max;
     position: fixed;
     transform: translateX(-50%);
     width: 95%;

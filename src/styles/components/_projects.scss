@@ -196,6 +196,11 @@
         transform: translateY(-135px);
         width: 100%;
         z-index: 99;
+
+        @include desktop-wide {
+            transform: translateY(-185px);
+            height: 500px;
+        }
     }
 
     &__tag {
