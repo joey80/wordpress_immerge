@@ -8,7 +8,7 @@ export function gallery() {
 };
 
 const lazyLoadImages = (array) => {
-    array.forEach((elm) => {
+    array.forEach(elm => {
         lazyLoad(elm, elm.dataset.type);
     });
 
@@ -45,7 +45,7 @@ const eventListenerInit = (array) => {
     const modal = document.querySelector('.modal');
     const gallery = document.querySelector('.gallery');
 
-    array.forEach((elm) => {
+    array.forEach(elm => {
         elm.addEventListener('click', () => {
             createModal(elm, modal);
             addModalImage(elm, modal);
