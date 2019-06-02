@@ -931,11 +931,15 @@ a:focus {
   .blog__container {
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     margin: 0 auto 3rem auto;
-    height: 400px;
     max-width: 1080px;
     transition: all 0.2s ease-in-out;
     width: 95%; }
+    @media (min-width: 768px) {
+      .blog__container {
+        flex-direction: row;
+        height: 400px; } }
     .blog__container:hover {
       box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
       transition: all 0.2s ease-in-out; }
@@ -965,24 +969,44 @@ a:focus {
         transform: scale(1.5) rotate(6deg);
         transition: all 0.5s ease-in-out; }
       .blog__container__image__container {
-        height: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        min-height: 200px;
         min-width: 350px;
         overflow: hidden;
-        width: 350px; }
+        width: 100%; }
+        @media (min-width: 768px) {
+          .blog__container__image__container {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            height: 100%;
+            width: 350px; } }
     .blog__container__bottom {
       background-color: #fcfcfc8e;
+      border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       display: flex;
       font-size: 0.7rem;
       justify-content: space-between;
       padding: 0.7rem 1rem 0.7rem 2rem;
       width: 100%; }
+      @media (min-width: 768px) {
+        .blog__container__bottom {
+          border-bottom-left-radius: 0; } }
     .blog__container__middle {
       background-color: #fff;
       flex-grow: 2;
       font-size: 0.9rem;
       line-height: 2;
       padding: 1rem 1rem 1rem 2rem; }
+      @media (min-width: 768px) {
+        .blog__container__middle {
+          font-size: 0.8rem;
+          line-height: 1.7; } }
+      @media (min-width: 1025px) {
+        .blog__container__middle {
+          font-size: 0.9rem;
+          line-height: 2; } }
     .blog__container__top {
       background-color: #fff;
       border-top-right-radius: 5px;
