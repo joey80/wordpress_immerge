@@ -15,6 +15,7 @@ $args = array(
 $the_query = new WP_Query( $args );
 
 ?>
+    <!-- .staff start -->
     <div class="staff">
 
     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -47,9 +48,9 @@ $the_query = new WP_Query( $args );
                         <span class="staff__content__title"><?php the_field('title') ?></span>
                         <hr />
                         <?php the_field('bio') ?>
-                    </span>
-                </div>
-            </div>
+                    </span><!-- .staff__content__bio end -->
+                </div><!-- .staff__content end -->
+            </div><!-- .staff__upper end -->
             <?php if( get_field('email') ): ?>
                 <div class="staff__badge">
                     <span><?php the_field('phone'); ?></span>
@@ -66,7 +67,7 @@ $the_query = new WP_Query( $args );
 	<?php endif; ?>
 	<?php wp_reset_query(); ?>
     
-    </div>
+    </div><!-- .staff end -->
 
 <?php
 
