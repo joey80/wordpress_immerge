@@ -1,5 +1,7 @@
+import { faq } from '../components/faq/faq';
+
 export default {
     init() {
-      console.log('faqs page');
-    },
+      faq();
+    }
 };
