@@ -38,7 +38,7 @@ $the_query = new WP_Query( $args );
                     <span>Categories</span>
                 </div><!-- .blog__container__top end -->
                 <div class="blog__container__middle">
-                    <span class="blog__title"><?php the_title(); ?></span>
+                    <span class="blog__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
                     <p><?php the_excerpt(); ?></p>
                 </div><!-- .blog__container__middle end -->
                 <div class="blog__container__bottom">

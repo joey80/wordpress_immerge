@@ -26,8 +26,8 @@
 
         &:hover .blog__container__image {
             background-blend-mode: normal;
-            box-shadow: inset -69px 0px 55px 3px rgba(0, 0, 0, 1);
-            transform: scale(1.5) rotate(6deg);
+            box-shadow: inset -69px 0px 55px 3px rgba(0, 0, 0, 0.7);
+            transform: scale(1.2) rotate(3deg);
             transition: all 0.5s ease-in-out;
         }
 
@@ -57,7 +57,7 @@
 
                 &:hover {
                     background-blend-mode: normal;
-                    box-shadow: inset -69px 0px 55px 3px rgba(0, 0, 0, 1);
+                    box-shadow: inset -69px 0px 55px 3px rgba(0, 0, 0, 0.7);
                     transform: scale(1.2) rotate(3deg);
                     transition: all 0.5s ease-in-out;
                 }
@@ -158,6 +158,22 @@
 
         @include desktop {
             font-size: 2rem;
+        }
+
+        & a {
+            color: #45347d;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        & a:visited {
+            color: #45347d;
+            text-decoration: none;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+            transition: all 0.3s ease-in-out
         }
     }
 }

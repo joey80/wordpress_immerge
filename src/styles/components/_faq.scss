@@ -1,10 +1,12 @@
 .faq {
     display: flex;
-    margin-top: -6rem;
+    flex-direction: column;
+    margin: -4rem auto;
+    max-width: $container-width-max;
+    width: $container-width;
 
-    &__arrow {
-        background-color: purple;
-        height: 100%;
+    @include desktop {
+        flex-direction: row;
     }
 
     &__container {
@@ -27,10 +29,6 @@
         }
     }
 
-    &__content {
-        flex-grow: 2;
-    }
-
     &__question {
         background-color: #f2f2f2;
         border-top-left-radius: 5px;
@@ -46,20 +44,6 @@
 
         @include tablet {
             font-size: 1.2rem;
-        }
-
-        &::before {   
-            background-size: 10px;   
-            background-image: url('http://100.26.102.174/wp-content/uploads/2019/05/leaf.png');
-            background-position: center center;
-            background-repeat: no-repeat; 
-            content: '';   
-            display: inline-block;   
-            height: 23px;
-            position: absolute;
-            transform: translate(-35px, 10px);
-            vertical-align: middle;
-            width: 14px;
         }
 
         &__container {
@@ -86,5 +70,11 @@
                 padding: 1rem 1rem 3rem 1.5rem;
             }
         }
+    }
+
+    &__leaf {
+        height: 23px;
+        transform: translate(-35px, 5px);
+        width: 14px;
     }
 }
