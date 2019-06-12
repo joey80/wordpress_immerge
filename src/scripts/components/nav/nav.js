@@ -1,4 +1,4 @@
-export function nav() {
+export const nav = () => {
     
     const menu = document.querySelector('.logonav');
     const links = document.querySelector('.logonav__nav');
@@ -6,9 +6,6 @@ export function nav() {
     const showNav = () => {
         menu.classList.remove('logonav--hide');
         links.classList.remove('logonav__nav--hide');
-        // setTimeout(() => {
-        //     links.classList.remove('logonav__nav--hide');
-        // }, 200);
     };
 
     const hideNav = () => {

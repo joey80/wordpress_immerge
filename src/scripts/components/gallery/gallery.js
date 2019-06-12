@@ -1,14 +1,14 @@
 import { lazyLoad } from '../../util/LazyLoad';
 import { Coordinates } from '../../util/Coordinates';
 
-export function gallery() {
+export const gallery = () => {
     const items = Array.from(document.querySelectorAll('.gallery__item'));
     lazyLoadImages(items);
     eventListenerInit(items);
 };
 
 const lazyLoadImages = (array) => {
-    array.forEach((elm) => {
+    array.forEach(elm => {
         lazyLoad(elm, elm.dataset.type);
     });
 
@@ -45,7 +45,7 @@ const eventListenerInit = (array) => {
     const modal = document.querySelector('.modal');
     const gallery = document.querySelector('.gallery');
 
-    array.forEach((elm) => {
+    array.forEach(elm => {
         elm.addEventListener('click', () => {
             createModal(elm, modal);
             addModalImage(elm, modal);

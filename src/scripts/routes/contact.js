@@ -1,5 +1,7 @@
+import { contact } from '../components/contact/contact';
+
 export default {
     init() {
-      console.log('contact page');
+      contact();
     },
 };

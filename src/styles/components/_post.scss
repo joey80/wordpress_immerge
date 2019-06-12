@@ -1,0 +1,47 @@
+.post {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__content {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        padding: 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
+
+        & h1 {
+            color: #45347d;
+            font-size: 1.953rem;
+        }
+
+        & h2 {
+            font-size: 1.563rem;
+        }
+
+        & h3 {
+            font-size: 1.25rem;
+        }
+
+        &__date {
+            font-size: 0.8rem;
+        }
+
+        &__image {
+            border-radius: 5px;
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    & hr {
+        border: 1px dashed rgba(0, 0, 0, 0.1);
+        margin: 2rem auto 4rem auto;
+    }
+}

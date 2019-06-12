@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin desktop-wide{
+    @media (min-width: $desktop-wide-width) {
+        @content;
+    }
+}

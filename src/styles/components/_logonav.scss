@@ -55,7 +55,7 @@
                 text-transform: uppercase;
 
                 @include tablet {
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                 }
 
                 &::before {
@@ -114,7 +114,6 @@
     &__sprout {
         display: inline-block;
         position: absolute;
-        background-image: url("https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/logo_sprout--big_abohld.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

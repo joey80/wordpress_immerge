@@ -193,9 +193,14 @@
         background-size: cover;
         height: 400px;
         position: relative;
-        transform: translateY(-130px);
+        transform: translateY(-135px);
         width: 100%;
         z-index: 99;
+
+        @include desktop-wide {
+            transform: translateY(-185px);
+            height: 500px;
+        }
     }
 
     &__tag {

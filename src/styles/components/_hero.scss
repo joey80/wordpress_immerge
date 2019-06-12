@@ -1,48 +1,71 @@
 .hero {
     height: 400px;
-    background-size: 700px 500px;
-    background-color: #72964c;//477516
-    background-position: top center;
-    background-attachment: fixed;
-    background-blend-mode: soft-light;
-    background-repeat: no-repeat;
+    background-color: #72964c;
     width: 100%;
 
     @include tablet {
-        background-position: left;
-        background-size: cover;
-        height: 500px;
+        height: 600px;
     }
 
     &__content {
+        align-items: flex-end;
+        color: #fff;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding: 0 2rem 7rem 0;
-        width: 100%;
+        font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+        font-weight: bold;
         height: 100%;
+        justify-content: flex-end;
+        letter-spacing: -0.05rem;
+        line-height: 0.5;
+        padding: 0 2rem 7rem 0;
+        text-transform: uppercase;
         text-shadow: 2px 2px 2px rgba(7, 85, 13, 0.2);
+        transform: translateY(-650px);
+        width: 100%;
 
-        & h1 {
-            color: #fff;
+        @include tablet {
+            transform: translateY(-650px);
+        }
+
+        &__large {
             font-size: 3rem;
-            font-weight: bold;
-            line-height: 0.5;
-
+            margin: 1.414rem 0 0.5rem;
+            
             @include tablet {
                 font-size: 4rem;
             }
         }
 
-        & h2 {
-            color: #fff;
+        &__small {
             font-size: 2rem;
-            line-height: 0.5;
+            margin: 1rem 0 0.5rem;
 
             @include tablet {
                 font-size: 3rem;
             }
         }
+    }
+
+    &__dirt {
+        object-fit: cover;
+
+        &__container {
+            height: 400px;
+            transform: translateY(-160px);
+            width: 100%;
+
+            @include desktop-wide {
+                height: 500px;
+                transform: translateY(-180px);
+            }
+        }
+    }
+
+    &__image {
+        mix-blend-mode: soft-light;
+        height: 600px;
+        object-fit: cover;
+        width: 100%;
     }
 }
