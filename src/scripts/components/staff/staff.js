@@ -1,4 +1,4 @@
-export function staff() {
+export const staff = () => {
     const items = Array.from(document.querySelectorAll('.staff__image__container'));
     eventListenerInit(items);
 };

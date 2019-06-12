@@ -3,7 +3,7 @@ const containers_length = containers.length;
 let i = 0;
 let next = 1;
 
-export function projects() {
+export const projects = () => {
     const parallaxArray1Init = Array.from(containers[i].children[1].children);
     containers[0].children[0].classList.add('projects__container__item--display');
     containers[0].children[2].classList.add('projects__container__item--display');

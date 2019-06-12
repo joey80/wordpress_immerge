@@ -1,4 +1,4 @@
-export function faq() {
+export const faq = () => {
     const containers = Array.from(document.querySelectorAll('.faq__question'));
     eventListenerInit(containers);
 };

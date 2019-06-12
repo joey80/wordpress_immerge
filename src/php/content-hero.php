@@ -9,7 +9,8 @@
 					data-src="<?php the_sub_field('hero_image'); ?>"
 					data-type="img">
 				<div class="hero__content">
-					<?php the_sub_field('hero_text'); ?>
+					<span class="hero__content__large"><?php the_sub_field('hero_text_large'); ?></span>
+					<span class="hero__content__small"><?php the_sub_field('hero_text_small'); ?></span>
 				</div>
 			</div>
 			<div class="hero__dirt__container">
@@ -17,7 +18,7 @@
 					class="hero__dirt immerge_lazy"
 					data-src="http://100.26.102.174/wp-content/uploads/2019/05/spatter_new.png"
 					data-type="img">
-            </div>
+			</div>
 			<!-- .hero end -->
 	
 		<?php endif; ?>

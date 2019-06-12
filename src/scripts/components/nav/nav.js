@@ -1,4 +1,4 @@
-export function nav() {
+export const nav = () => {
     
     const menu = document.querySelector('.logonav');
     const links = document.querySelector('.logonav__nav');

@@ -1,9 +1,6 @@
 .faq {
     display: flex;
     flex-direction: column;
-    margin: -4rem auto;
-    max-width: $container-width-max;
-    width: $container-width;
 
     @include desktop {
         flex-direction: row;
@@ -25,12 +22,23 @@
 
         @include tablet {
             margin: 0 auto 2rem auto;
-            width: $container-width;
+            width: 90%;
+        }
+    }
+
+    &__content {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+
+        & h1 {
+            font-size: 1.7rem ;
+            margin: 3rem auto;
+            text-align: center;
         }
     }
 
     &__question {
-        background-color: #f2f2f2;
+        background-color: #fff;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         color: #45347d;

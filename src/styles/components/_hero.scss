@@ -8,35 +8,38 @@
     }
 
     &__content {
+        align-items: flex-end;
+        color: #fff;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding: 0 2rem 7rem 0;
-        width: 100%;
+        font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+        font-weight: bold;
         height: 100%;
+        justify-content: flex-end;
+        letter-spacing: -0.05rem;
+        line-height: 0.5;
+        padding: 0 2rem 7rem 0;
+        text-transform: uppercase;
         text-shadow: 2px 2px 2px rgba(7, 85, 13, 0.2);
-        transform: translateY(-700px);
+        transform: translateY(-650px);
+        width: 100%;
 
         @include tablet {
-            transform: translateY(-600px);
+            transform: translateY(-650px);
         }
 
-        & h1 {
-            color: #fff;
+        &__large {
             font-size: 3rem;
-            font-weight: bold;
-            line-height: 0.5;
-
+            margin: 1.414rem 0 0.5rem;
+            
             @include tablet {
                 font-size: 4rem;
             }
         }
 
-        & h2 {
-            color: #fff;
+        &__small {
             font-size: 2rem;
-            line-height: 0.5;
+            margin: 1rem 0 0.5rem;
 
             @include tablet {
                 font-size: 3rem;

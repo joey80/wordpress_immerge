@@ -28,7 +28,8 @@ $the_query = new WP_Query( $args );
                     <div
                         class="blog__container__image immerge_lazy"
                         data-src="<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large'); ?>"
-                        data-type="bg">
+                        data-type="bg"
+                        alt="<?php the_title(); ?>">
                     </div>
                 <?php endif; ?>
             </div>

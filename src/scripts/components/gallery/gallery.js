@@ -1,7 +1,7 @@
 import { lazyLoad } from '../../util/LazyLoad';
 import { Coordinates } from '../../util/Coordinates';
 
-export function gallery() {
+export const gallery = () => {
     const items = Array.from(document.querySelectorAll('.gallery__item'));
     lazyLoadImages(items);
     eventListenerInit(items);
