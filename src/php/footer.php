@@ -10,7 +10,8 @@
 </div><!-- .app end -->
 
 <footer class="footer">
-    <div class="footer__section">
+    <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+    <!-- <div class="footer__section">
         <h3>Section Title</h3>
         <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer experience
         and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital services.
@@ -20,10 +21,7 @@
         Harrisonburg, VA 22802</p>
         <p>info@immergetech.com<br />
         (540) 437-9617</p>
-    </div><!-- .footoer__section end -->
-    
-    <div class="footer__section">
-    </div><!-- .footer__section end -->
+    </div>.footoer__section end -->
 
     <div class="footer__section">
         <?php

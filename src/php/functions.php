@@ -98,6 +98,10 @@ function immerge_demo_content_width() {
 }
 add_action( 'after_setup_theme', 'immerge_demo_content_width', 0 );
 
+
+
+
+
 /**
  * Register widget area.
  *
@@ -107,14 +111,40 @@ function immerge_demo_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'immerge_demo' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'immerge_demo' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'Add widgets to sidebar', 'immerge_demo' ),
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name' => esc_html__( 'Footer' ),
+		'id' => 'footer-sidebar-1',
+		'description' => esc_html__(' Add widgets to footer' ),
+		'before_widget' => '<div class="%2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		) );
 }
 add_action( 'widgets_init', 'immerge_demo_widgets_init' );
+
+
+
+
+
+/**
+ * Add Google Map js to the contact page
+ */
+function immerge_google_map_add() {
+	if (  is_page('Contact') ) {
+			wp_enqueue_script('immerge_google_map', 'https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyCVxv-kTxZm0K_9H6yDTHk461gTZ6SIM5I;ver=3.19.10', '', 1.0, true);
+	}
+} add_action('wp_enqueue_scripts', 'immerge_google_map_add');
+
+
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -126,28 +156,41 @@ function immerge_demo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'immerge_demo_scripts' );
 
+
+
+
+
 /**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+
+
+
 
 /**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+
+
+
+
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+
+
+
+
 /**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-
-
 
 
 
@@ -198,6 +241,9 @@ function immerge_hide_editor() {
 add_action('admin_init', 'immerge_hide_editor');
 
 
+
+
+
 /**
  * Disable the emoji's
  */
@@ -214,6 +260,10 @@ function disable_emojis() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
 add_action( 'init', 'disable_emojis' );
+
+
+
+
 
 /**
  * Filter out the tinymce emoji plugin.

@@ -3,7 +3,7 @@ export const faq = () => {
     eventListenerInit(containers);
 };
 
-const handleClick = (target) => {
+const handleClick = target => {
     const answer = target.nextElementSibling;
     if (answer.style.maxHeight ? setStyle(answer, {'maxHeight': null}, 'hide') : setStyle(answer, {'maxHeight': `${answer.scrollHeight + 40}px`}, 'show'));
 };
@@ -15,7 +15,7 @@ const setStyle = (div, props, state) => {
     }
 };
     
-const eventListenerInit = (array) => {
+const eventListenerInit = array => {
     array.forEach(elm => {
         elm.addEventListener('click', event => {
             let target = event.target;
