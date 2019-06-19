@@ -1,5 +1,3 @@
-import { validate } from './validate';
-
 export const contact = () => {
     const lat = 38.451150;
     const lng = -78.870530;
@@ -43,30 +41,5 @@ const addMapMarkers = (array, map) => {
         infoWindow.open(map, marker);
     });
 };
-
-const eventListenerInit = () => {
-    const button = document.getElementById('submit-button');
-    const errorBox = document.querySelector('.contact__section__error');
-    const theForm = document.getElementById('theForm');
-
-    button.addEventListener('click', event => {
-        event.preventDefault();
-        const formFields = {
-            fullName: document.getElementsByName('fullName')[0].value,
-            email: document.getElementsByName('email')[0].value,
-            company: document.getElementsByName('company')[0].value,
-            phone: document.getElementsByName('phone')[0].value,
-            human: document.getElementsByName('human')[0].value
-        }
-        const errorMessage = validate(formFields);
-
-        if (errorMessage != null) {
-            errorBox.innerHTML = errorMessage;
-        } else {
-            errorBox.innerHTML = "";
-            theForm.submit();
-        }
-    });
-}
 
 export default { contact };

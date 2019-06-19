@@ -1,0 +1,29 @@
+.homes {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        line-height: 1.4;
+        text-transform: none;
+        font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+        color: inherit;
+    }
+
+    &__content {
+        background-color: #f4f4f4ee;
+        border-radius: 5px;
+        min-width: 60%;
+        padding: 2rem;
+    }
+}

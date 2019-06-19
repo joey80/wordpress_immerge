@@ -29,11 +29,17 @@
     &__content {
         background-color: #f4f4f4ee;
         border-radius: 5px;
+        min-width: 70%;
 
         & h1 {
             font-size: 1.7rem ;
             margin: 3rem auto;
             text-align: center;
+        }
+
+        &--narrow {
+            @extend .faq__content;
+            padding: 0.5rem 2rem 2rem 2rem;
         }
     }
 
