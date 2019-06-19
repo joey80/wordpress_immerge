@@ -860,20 +860,19 @@ a:focus {
           .staff__container__facts > ul li::before {
             transform: translate(-25px, 7px); } }
   .staff__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 2rem;
-    padding: 0 1rem;
+    padding: 2rem 2rem 0 2rem;
     width: 100%; }
     @media (min-width: 1025px) {
       .staff__content {
-        padding: 0 3rem; } }
+        flex-direction: row; } }
     .staff__content__bio {
       display: inline-block;
       font-size: 1rem;
-      line-height: 1.8;
-      margin-top: 1rem; }
-      @media (min-width: 768px) {
-        .staff__content__bio {
-          margin: 2rem 0 0 1rem; } }
+      line-height: 1.8; }
     .staff__content__name {
       color: #45347d;
       display: block;
@@ -909,7 +908,6 @@ a:focus {
         transform: rotateY(180deg); }
       @media (min-width: 768px) {
         .staff__image__container {
-          float: left;
           margin: 0 2rem 1rem 0; } }
     .staff__image__back {
       backface-visibility: hidden;
