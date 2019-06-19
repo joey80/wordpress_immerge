@@ -113,23 +113,21 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-bottom: 2rem;
-        padding: 0 1rem;
+        padding: 2rem 2rem 0 2rem;
         width: 100%;
 
         @include desktop {
-            padding: 0 3rem;
+            flex-direction: row;
         }
 
         &__bio {
             display: inline-block;
             font-size: 1rem;
             line-height: 1.8;
-            margin-top: 1rem;
-
-            @include tablet {
-                margin: 2rem 0 0 1rem;
-            }
         }
 
         &__name {
@@ -180,7 +178,7 @@
             }
 
             @include tablet {
-                float: left;
+                //float: left;
                 margin: 0 2rem 1rem 0;
             }
         }
