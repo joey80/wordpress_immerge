@@ -3,15 +3,16 @@ export const contact = () => {
     const lng = -78.870530;
     const map = loadMap(lat, lng);
     const markup = `
-        <div class="infoContainer">
+        <div>
             <strong>Immerge</strong>
-            <p class="address">139 N. Liberty St., Suite 202<br />
+            <p>139 N. Liberty St., Suite 202<br />
             Harrisonburg, VA 22802</p>
             <p>(540) 437-9617</p>
         </div>`;
     const info = [lat, lng, markup];
 
     addMapMarkers(info, map);
+    eventListenerInit();
 };
 
 const loadMap = (theLat, theLng) => {

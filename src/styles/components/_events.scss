@@ -1,0 +1,105 @@
+.events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    & a {
+        color: initial;
+        text-decoration: none;
+    }
+
+    & a:visited {
+        color: initial;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    &__card {
+        background-color: #fff;
+        border-radius: 5px;
+        height: 400px;
+        margin: 0 auto 2rem auto;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        width: 90%;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover .events__card__image {
+            mix-blend-mode: normal;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include desktop {
+            margin: initial;
+            width: 30%;
+        }
+
+        &__content {
+            padding: 0.5rem 1rem;
+            width: 100%;
+
+            & p {
+                font-size: 0.7rem;
+                margin-top: 0.3rem;
+            }
+        }
+
+        &__date {
+            background-color: #95d65f;
+            border-radius: 5px;
+            color: #2f670f;
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            left: 15px;
+            line-height: 1.7;
+            padding: 1rem;
+            position: absolute;
+            text-align: center;
+            top: 15px;
+        }
+
+        &__image {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            height: 225px;
+            max-width: 100%;
+            min-width: 100%;
+            mix-blend-mode: luminosity;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &__time {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1.3rem;
+            line-height: 0;
+        }
+    }
+
+    &__meta {
+
+        &__title {
+            display: block;
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+}

@@ -54,19 +54,30 @@ get_template_part( 'template-parts/content', 'navigation' );
                     class="post__content__image immerge_lazy"
                     data-src="<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'large'); ?>"
                     data-type="img"
-                    alt="<?php the_title(); ?>" />
+                    alt="<?php the_title(); ?>"
+                />
                 <h1><?php the_title(); ?></h1>
-                <span class="post__content__date">Posted on: <strong><?php echo get_the_date( get_option('date_format') ); ?></strong></span>
+                <span class="events__meta__title">
+                    <strong>Date:</strong> <?php the_field('date'); ?>
+                </span>
+                <span class="events__meta__title">
+                    <strong>Time:</strong> <?php the_field('time'); ?>
+                </span>
+                <span class="events__meta__title"><strong>Location:</strong><br />
+                    <?php the_field('location'); ?>
+                </span>
                 <hr class="post__hr" />
-                <?php the_content(); ?>
+                <?php the_field('description'); ?>
 
                 <?php endwhile; ?>
                 <?php endif; ?>
-            </div>
+            </div><!-- .post__content end -->
+
             <!-- .sidebar start -->
             <aside class="sidebar">
                 <?php get_sidebar(); ?>
             </aside><!-- .sidebar end -->
+            
         </div><!-- .post end -->
 
 <?php

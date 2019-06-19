@@ -49,18 +49,45 @@
             <!-- .contact start -->
             <div class="contact">
                 <div class="contact__section">
-                    <h3>Contact Us</h3>
-                    Immerge, a division of McClung Companies, is a full-service digital marketing firm. Founded
-                    in 2005, Immerge offers multi-platform marketing services. For a complete list of service,
-                    please visit our services page or view our portfolio.
+                    <div>
+                        <h3>Contact Us</h3>
+                        <p>Immerge, a division of McClung Companies, is a full-service digital marketing firm. Founded
+                        in 2005, Immerge offers multi-platform marketing services. For a complete list of service,
+                        please visit our services page or view our portfolio.</p>
+                    </div>
+                    <img
+                        class="contact__section__image immerge_lazy"
+                        data-src="https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/hero_npsfrt.jpg"
+                        data-type="img" />
                 </div>
                 <div class="contact__section">
-                    <form>
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <textarea></textarea>
+                    <form id="theForm">
+                        <div class="contact__section__error">
+                        </div>
+                        <div class="contact__section__group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" name="fullName">
+                        </div>
+                        <div class="contact__section__group">
+                            <label for="email">Email</label>
+                            <input type="text" name="email">
+                        </div>
+                        <div class="contact__section__group">
+                            <label for="company">Company</label>
+                            <input type="text" name="company">
+                        </div>
+                        <div class="contact__section__group">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone">
+                        </div>
+                        <div class="contact__section__group">
+                            <label for="messasge">Message</label>
+                            <textarea name="message" rows="3"></textarea>
+                        </div>
+                        <div class="contact__section__group">
+                            <input type="text" name="human" class="contact__section__group__human"> + 3 = 5
+                        </div>
+                        <button id="submit-button" aria-label="Form Submit" type="submit">Submit</button>
                     </form>
                 </div>
             </div><!-- .contact end -->

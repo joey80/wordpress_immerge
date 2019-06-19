@@ -141,7 +141,7 @@
 
     &__search {
 
-        & button {
+        &__button {
             align-items: center;
             background-color: #868e96;
             border-radius: 5px;
@@ -168,7 +168,9 @@
 
             & > input {
                 border: 0;
+                border-radius: 0 !important;
                 padding-left: 0.5rem;
+                -webkit-appearance: none !important;
                 width: 75%;
 
                 @include tablet {
@@ -182,10 +184,23 @@
         }
     }
 
-    &__text {
+    &_text {
+
+        & h2 {
+            color: #45347d;
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
 
         & p {
             font-size: 0.9rem;
         }
+    }
+}
+
+.textwidget {
+
+    & p {
+        font-size: 0.8rem;
     }
 }
