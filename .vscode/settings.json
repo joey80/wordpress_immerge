@@ -1,0 +1,25 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "explorer.openEditors.visible": 0,
+  "vsicons.associations.files": [
+    { "icon": "storybook", "extensions": ["stories.js"], "filename": true, "format": "svg" },
+    {
+      "icon": "jest",
+      "extensions": ["test.tsx", "test.js", "test.ts", "utils.test.ts"],
+      "filename": true,
+      "format": "svg"
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#fff",
+    "titleBar.inactiveForeground": "#fff",
+    "titleBar.activeBackground": "#71cbee",
+    "titleBar.inactiveBackground": "#71cbee"
+  },
+  "window.zoomLevel": 0
+}
