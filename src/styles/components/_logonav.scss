@@ -1,153 +1,154 @@
 .logonav {
-    position: fixed;
-    background-color: #fff;
-    height: 400px;
-    width: 100%;
-    transform: translateY(0);
-    transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.1);
-    z-index: 9999;
+  position: fixed;
+  background-color: #fff;
+  height: 400px;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.1);
+  z-index: 9999;
+
+  @include tablet {
+    height: 80px;
+    transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.1);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    text-transform: capitalize;
+    transform: translate3d(0, 0, 0) scale(1);
+    transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
 
     @include tablet {
-        height: 80px;
-        transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.1);
+      transform: translate3d(0, 0, 0) scale(1);
     }
 
-    &__nav {
-        display: flex;
-        justify-content: center;
-        opacity: 1;
-        text-transform: capitalize;
-        transform: translate3d(0,0,0) scale(1);
-        transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
+    & ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
 
-        @include tablet {
-            transform: translate3d(0,0,0) scale(1);
-        }
-
-        & ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-
-            @include tablet {
-                padding: initial;
-                text-align: initial;
-            }
-        }
-
-        & li {
-            display: block;
-            margin: 0 auto 0.3rem auto;
-
-            @include tablet {
-                display: inline-block;
-                margin: 0 1rem;
-            }
-
-            & a {
-                position: relative;
-                color: #000;
-                font-weight: 700;
-                font-size: 1rem;
-                text-decoration: none;
-                transition: all 0.3s ease-in-out;
-                text-transform: uppercase;
-
-                @include tablet {
-                    font-size: 0.9rem;
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    bottom: -5px;
-                    left: 0;
-                    text-decoration: none;
-                    background-color: #8053f6;
-                    visibility: hidden;
-                    transform: scale(0);
-                    transition: all 0.2s ease-in-out;
-                }
-
-                &:hover {
-                    color: #8053f6;
-                    transition: all 0.3s ease-in-out;
-
-                    &::before {
-                        visibility: visible;
-                        transform: scale(1);
-                    }
-                }
-            }
-
-            &:first-child {
-                transform: translate3d(0,6px,0);
-            }
-
-            & img {
-                width: 150px;
-                height: 39px;
-                margin-bottom: 1rem;
-
-                @include tablet {
-                    width: 100px;
-                    height: 26px;
-                    margin: 0;
-                }
-            }
-        }
-
-        &--hide {
-            opacity: 0;
-            transform: translate3d(0,-100px,0) scale(0);
-            transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
-
-            @include tablet {
-                transform: translate3d(0,-70px,0) scale(3);
-            }
-        }
+      @include tablet {
+        padding: initial;
+        text-align: initial;
+      }
     }
 
-    &__sprout {
+    & li {
+      display: block;
+      margin: 0 auto 0.3rem auto;
+
+      @include tablet {
         display: inline-block;
-        position: absolute;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100px;
-        height: 100px;
-        left: 50%;
-        transform: translateX(-50%) rotate(0deg);
-        border-radius: 50%;
-        transition: transform 0.3s ease-in-out;
+        margin: 0 1rem;
+      }
+
+      & a {
+        position: relative;
+        color: #000;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
 
         @include tablet {
-            width: 120px;
-            height: 120px;
-            transform: translateX(-50%) translateY(-10px) rotate(0deg);
+          font-size: 0.9rem;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          text-decoration: none;
+          background-color: #8053f6;
+          visibility: hidden;
+          transform: scale(0);
+          transition: all 0.2s ease-in-out;
         }
 
         &:hover {
-            cursor: pointer;
-            transform: translateX(-50%) rotate(20deg);
-            box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease-in-out;
+          color: #8053f6;
+          transition: all 0.3s ease-in-out;
 
-            @include tablet {
-                transform: translateX(-50%) translateY(-10px) rotate(20deg); 
-            }
+          &::before {
+            visibility: visible;
+            transform: scale(1);
+          }
         }
+      }
+
+      &:first-child {
+        transform: translate3d(0, 6px, 0);
+      }
+
+      & img {
+        width: 150px;
+        height: 39px;
+        margin-bottom: 1rem;
+
+        @include tablet {
+          width: 100px;
+          height: 26px;
+          margin: 0;
+        }
+      }
     }
 
     &--hide {
-        transform: translateY(-380px);
-        transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.75);
+      opacity: 0;
+      transform: translate3d(0, -100px, 0) scale(0);
+      transition: all 0.7s cubic-bezier(0.75, -0.5, 0, 1.75);
 
-        @include tablet {
-            transform: translateY(-60px);
-            transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.75);
-        }
+      @include tablet {
+        transform: translate3d(0, -70px, 0) scale(3);
+      }
     }
+  }
+
+  &__sprout {
+    display: inline-block;
+    position: absolute;
+    background: url('../../images/logo_sprout--big.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+
+    @include tablet {
+      width: 120px;
+      height: 120px;
+      transform: translateX(-50%) translateY(-10px) rotate(0deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateX(-50%) rotate(20deg);
+      box-shadow: 0 30px 66px -26px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease-in-out;
+
+      @include tablet {
+        transform: translateX(-50%) translateY(-10px) rotate(20deg);
+      }
+    }
+  }
+
+  &--hide {
+    transform: translateY(-380px);
+    transition: transform 0.7s cubic-bezier(0.75, 0, 0, 1.75);
+
+    @include tablet {
+      transform: translateY(-60px);
+      transition: all 0.3s cubic-bezier(0.75, 0, 0, 1.75);
+    }
+  }
 }
