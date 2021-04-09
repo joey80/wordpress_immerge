@@ -1,14 +1,14 @@
 .card {
-    background-color: red;
-    height: 400px;
-    width: 350px;
+  background-color: red;
+  height: 400px;
+  width: 350px;
 
-    &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: $container-width-max;
-        width: $container-width;
-    }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $container-width-max;
+    width: $container-width;
+  }
 }

@@ -1,22 +1,22 @@
 .feature {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 
-    & h2 {
-        text-transform: capitalize;
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-    }
+  & h2 {
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
 
-    & hr {
-        margin: 3rem 0;
-        border: 0;
-        border-bottom: 1px dashed #ccc;
-        background: #999;
-        width: 30%;
-    }
+  & hr {
+    margin: 3rem 0;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+    width: 30%;
+  }
 
-    & p {
-        font-style: italic;
-        max-width: 60%;
-    }
+  & p {
+    font-style: italic;
+    max-width: 60%;
+  }
 }
