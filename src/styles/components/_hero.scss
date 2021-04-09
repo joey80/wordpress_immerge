@@ -1,71 +1,71 @@
 .hero {
-    height: 400px;
-    background-color: #72964c;
+  height: 400px;
+  background-color: #72964c;
+  width: 100%;
+
+  @include tablet {
+    height: 600px;
+  }
+
+  &__content {
+    align-items: flex-end;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: bold;
+    height: 100%;
+    justify-content: flex-end;
+    letter-spacing: -0.05rem;
+    line-height: 0.5;
+    padding: 0 2rem 7rem 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(7, 85, 13, 0.2);
+    transform: translateY(-650px);
     width: 100%;
 
     @include tablet {
-        height: 600px;
+      transform: translateY(-650px);
     }
 
-    &__content {
-        align-items: flex-end;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-        font-weight: bold;
-        height: 100%;
-        justify-content: flex-end;
-        letter-spacing: -0.05rem;
-        line-height: 0.5;
-        padding: 0 2rem 7rem 0;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 2px rgba(7, 85, 13, 0.2);
-        transform: translateY(-650px);
-        width: 100%;
+    &__large {
+      font-size: 3rem;
+      margin: 1.414rem 0 0.5rem;
 
-        @include tablet {
-            transform: translateY(-650px);
-        }
-
-        &__large {
-            font-size: 3rem;
-            margin: 1.414rem 0 0.5rem;
-            
-            @include tablet {
-                font-size: 4rem;
-            }
-        }
-
-        &__small {
-            font-size: 2rem;
-            margin: 1rem 0 0.5rem;
-
-            @include tablet {
-                font-size: 3rem;
-            }
-        }
+      @include tablet {
+        font-size: 4rem;
+      }
     }
 
-    &__dirt {
-        object-fit: cover;
+    &__small {
+      font-size: 2rem;
+      margin: 1rem 0 0.5rem;
 
-        &__container {
-            height: 400px;
-            transform: translateY(-170px);
-            width: 100%;
-
-            @include desktop-wide {
-                height: 500px;
-                transform: translateY(-180px);
-            }
-        }
+      @include tablet {
+        font-size: 3rem;
+      }
     }
+  }
 
-    &__image {
-        mix-blend-mode: soft-light;
-        height: 600px;
-        object-fit: cover;
-        width: 100%;
+  &__dirt {
+    object-fit: cover;
+
+    &__container {
+      height: 400px;
+      transform: translateY(-170px);
+      width: 100%;
+
+      @include desktop-wide {
+        height: 500px;
+        transform: translateY(-180px);
+      }
     }
+  }
+
+  &__image {
+    mix-blend-mode: soft-light;
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+  }
 }

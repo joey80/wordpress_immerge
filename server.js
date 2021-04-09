@@ -1,9 +1,9 @@
-const express = require('express'),
-    compression = require('compression'),
-    serveStatic = require('serve-static'),
-    helmet = require('helmet'),
-    app = express(),
-    port = process.env.PORT || 5000;
+const express = require('express');
+const compression = require('compression');
+const serveStatic = require('serve-static');
+const helmet = require('helmet');
+const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(compression());
 app.use(helmet());

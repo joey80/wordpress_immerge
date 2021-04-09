@@ -1,65 +1,65 @@
 .modal {
+  background-color: #fff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px 1000px rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 390px;
+  left: 50%;
+  top: 20px;
+  max-width: $container-width-max;
+  position: fixed;
+  transform: translateX(-50%);
+  width: 95%;
+  z-index: 999999;
+
+  @include tablet {
+    background-size: cover;
+    height: 600px;
+  }
+
+  @include desktop {
+    height: 700px;
+  }
+
+  &__close {
     background-color: #fff;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    box-shadow: 0px 0px 50px 1000px rgba(0,0,0,0.8);
-    display: none;
-    height: 390px;
-    left: 50%;
-    top: 20px;
-    max-width: $container-width-max;
-    position: fixed;
-    transform: translateX(-50%);
-    width: 95%;
-    z-index: 999999;
+    color: #8053f6;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 2rem;
+    padding: 0.2rem 0.6rem;
+    transition: all 0.3s ease-in-out;
 
-    @include tablet {
-        background-size: cover;
-        height: 600px;
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
     }
+  }
 
-    @include desktop {
-        height: 700px;
-    }
+  &__header {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+  }
 
-    &__close {
-        background-color: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        color: #8053f6;
-        cursor: pointer;
-        font-size: 0.8rem;
-        font-weight: bold;
-        margin-right: 2rem;
-        padding: 0.2rem 0.6rem;
-        transition: all 0.3s ease-in-out;
+  &__title {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 2rem;
+  }
 
-        &:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease-in-out;
-        }
-    }
-
-    &__header {
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.7);
-        color: #000;
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-        width: 100%;
-    }
-
-    &__title {
-        text-transform: capitalize;
-        font-size: 1.1rem;
-        font-weight: bold;
-        padding-left: 2rem;
-    }
-
-    &--show {
-        display: block;
-    }
+  &--show {
+    display: block;
+  }
 }
