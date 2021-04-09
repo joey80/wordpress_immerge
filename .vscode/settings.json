@@ -3,6 +3,13 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.printWidth": 100,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
   "explorer.openEditors.visible": 0,
   "vsicons.associations.files": [
     { "icon": "storybook", "extensions": ["stories.js"], "filename": true, "format": "svg" },

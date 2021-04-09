@@ -13,17 +13,17 @@ import home from './routes/home';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
-    common,
-    home,
-    about,
-    staff,
-    faqs,
-    gallery,
-    blog,
-    events,
-    contact
+  common,
+  home,
+  about,
+  staff,
+  faqs,
+  gallery,
+  blog,
+  events,
+  contact,
 });
-  
+
 window.addEventListener('DOMContentLoaded', () => {
-    routes.loadEvents();
+  routes.loadEvents();
 });

@@ -1,136 +1,145 @@
 <!doctype html>
-    <head>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="../dist/main.css" />
-    </head>
 
-    <body data-route="contact">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/main.css" />
+</head>
 
-        <!-- .logonav start -->
-        <div class="logonav logonav--hide">
-            <a class="brand" href="./index.html"><div class="logonav__logo logonav__logo--hide"></div></a>
-            <nav class="logonav__nav logonav__nav--hide">
-                <ul>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./staff.html">Staff</a></li>
-                    <li><a href="./faqs.html">Faqs</a></li>
-                    <li><a href="./gallery.html">Gallery</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./events.html">Events</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="logonav__sprout"></div>
-        </div><!-- .logonav end -->
+<body data-route="contact">
 
-        <!-- .hero start -->
-        <div class="hero">
-            <img
-                class="hero__image immerge_lazy"
-                data-src="../images/hero.jpg"
-                data-type="img">
-            <div class="hero__content">
-                <span class="hero__content__large">Marketing</span>
-                <span class="hero__content__small">Simplified</span>
-            </div>
+    <!-- .logonav start -->
+    <div class="logonav logonav--hide">
+        <a class="brand" href="./index.html">
+            <div class="logonav__logo logonav__logo--hide"></div>
+        </a>
+        <nav class="logonav__nav logonav__nav--hide">
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./staff.html">Staff</a></li>
+                <li><a href="./faqs.html">Faqs</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./events.html">Events</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logonav__sprout"></div>
+    </div><!-- .logonav end -->
+
+    <!-- .hero start -->
+    <div class="hero">
+        <img class="hero__image immerge_lazy" data-src="../images/hero.jpg" data-type="img">
+        <div class="hero__content">
+            <span class="hero__content__large">Marketing</span>
+            <span class="hero__content__small">Simplified</span>
         </div>
-        <div class="hero__dirt__container">
-            <img
-                class="hero__dirt immerge_lazy"
-                data-src="http://100.26.102.174/wp-content/uploads/2019/05/spatter_new.png"
-                data-type="img">
-        </div>
-        <!-- .hero end -->
+    </div>
+    <div class="hero__dirt__container">
+        <img class="hero__dirt immerge_lazy" data-src="http://100.26.102.174/wp-content/uploads/2019/05/spatter_new.png"
+            data-type="img">
+    </div>
+    <!-- .hero end -->
 
-        <!-- .app start -->
-        <div class="app">
+    <!-- .app start -->
+    <div class="app">
 
-            <!-- .contact start -->
-            <div class="contact">
-                <div class="contact__section">
-                    <div>
-                        <h3>Contact Us</h3>
-                        <p>Immerge, a division of McClung Companies, is a full-service digital marketing firm. Founded
+        <!-- .contact start -->
+        <div class="contact">
+            <div class="contact__section">
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>Immerge, a division of McClung Companies, is a full-service digital marketing firm. Founded
                         in 2005, Immerge offers multi-platform marketing services. For a complete list of service,
                         please visit our services page or view our portfolio.</p>
+                </div>
+                <img class="contact__section__image immerge_lazy"
+                    data-src="https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/hero_npsfrt.jpg"
+                    data-type="img" />
+            </div>
+            <div class="contact__section">
+                <form id="theForm">
+                    <div class="contact__section__error">
                     </div>
-                    <img
-                        class="contact__section__image immerge_lazy"
-                        data-src="https://res.cloudinary.com/hc4srjl6b/image/upload/v1558145512/hero_npsfrt.jpg"
-                        data-type="img" />
-                </div>
-                <div class="contact__section">
-                    <form id="theForm">
-                        <div class="contact__section__error">
-                        </div>
-                        <div class="contact__section__group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" name="fullName">
-                        </div>
-                        <div class="contact__section__group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email">
-                        </div>
-                        <div class="contact__section__group">
-                            <label for="company">Company</label>
-                            <input type="text" name="company">
-                        </div>
-                        <div class="contact__section__group">
-                            <label for="phone">Phone</label>
-                            <input type="text" name="phone">
-                        </div>
-                        <div class="contact__section__group">
-                            <label for="messasge">Message</label>
-                            <textarea name="message" rows="3"></textarea>
-                        </div>
-                        <div class="contact__section__group">
-                            <input type="text" name="human" class="contact__section__group__human"> + 3 = 5
-                        </div>
-                        <button id="submit-button" aria-label="Form Submit" type="submit">Submit</button>
-                    </form>
-                </div>
-            </div><!-- .contact end -->
-            <div id="map"></div>
-        </div><!-- .app end -->
+                    <div class="contact__section__group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" name="fullName">
+                    </div>
+                    <div class="contact__section__group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="contact__section__group">
+                        <label for="company">Company</label>
+                        <input type="text" name="company">
+                    </div>
+                    <div class="contact__section__group">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone">
+                    </div>
+                    <div class="contact__section__group">
+                        <label for="messasge">Message</label>
+                        <textarea name="message" rows="3"></textarea>
+                    </div>
+                    <div class="contact__section__group">
+                        <input type="text" name="human" class="contact__section__group__human"> + 3 = 5
+                    </div>
+                    <button id="submit-button" aria-label="Form Submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div><!-- .contact end -->
+        <div id="map"></div>
+    </div><!-- .app end -->
 
-        <div class="footer">
-            <div class="footer__section">
-                <h3>Section Title</h3>
-                <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer experience
-                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital services.
-                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and exceeding
+    <div class="footer">
+        <div class="footer__section">
+            <h3>Section Title</h3>
+            <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer
+                experience
+                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital
+                services.
+                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and
+                exceeding
                 partner expectations at every touch-point.</p>
-                <p>139 N. Liberty Street Suite 202<br />
+            <p>139 N. Liberty Street Suite 202<br />
                 Harrisonburg, VA 22802</p>
-                <p>info@immergetech.com<br />
+            <p>info@immergetech.com<br />
                 (540) 437-9617</p>
-            </div>
-            <div class="footer__section">
-                <h3>Section Title</h3>
-                <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer experience
-                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital services.
-                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and exceeding
-                partner expectations at every touch-point.</p>
-                <p>139 N. Liberty Street Suite 202<br />
-                Harrisonburg, VA 22802</p>
-                <p>info@immergetech.com<br />
-                (540) 437-9617</p>
-            </div>
-            <div class="footer__section">
-                <h3>Section Title</h3>
-                <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer experience
-                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital services.
-                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and exceeding
-                partner expectations at every touch-point.</p>
-                <p>139 N. Liberty Street Suite 202<br />
-                Harrisonburg, VA 22802</p>
-                <p>info@immergetech.com<br />
-                (540) 437-9617</p>
-            </div>
         </div>
+        <div class="footer__section">
+            <h3>Section Title</h3>
+            <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer
+                experience
+                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital
+                services.
+                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and
+                exceeding
+                partner expectations at every touch-point.</p>
+            <p>139 N. Liberty Street Suite 202<br />
+                Harrisonburg, VA 22802</p>
+            <p>info@immergetech.com<br />
+                (540) 437-9617</p>
+        </div>
+        <div class="footer__section">
+            <h3>Section Title</h3>
+            <p>Immerge is a division of McClung Companies. At McClung, we seek to deliver an exceptional customer
+                experience
+                and be recognized as the region’s premier experts for comprehensive printing, marketing, and digital
+                services.
+                And, as we have for many years, we commit to continue our heritage of innovation, personal service, and
+                exceeding
+                partner expectations at every touch-point.</p>
+            <p>139 N. Liberty Street Suite 202<br />
+                Harrisonburg, VA 22802</p>
+            <p>info@immergetech.com<br />
+                (540) 437-9617</p>
+        </div>
+    </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyDzTw8Efuu_NVg1RBpTcQa-RyeNZBEehZA&#038;ver=3.19.10"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyDzTw8Efuu_NVg1RBpTcQa-RyeNZBEehZA&#038;ver=3.19.10"></script>
     <script src="../dist/bundle.js"></script>
-    </body>
+</body>
+
 </html>

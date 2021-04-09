@@ -1,5 +1,5 @@
 export default {
-    init() {
-      console.log('blog page');
-    },
+  init() {
+    console.log('blog page');
+  },
 };

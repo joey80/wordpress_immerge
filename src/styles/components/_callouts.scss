@@ -1,88 +1,88 @@
 .callouts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  & a {
+    color: initial;
+    text-decoration: none;
+  }
+
+  & a:visited {
+    color: initial;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+
+  &__container {
+    background-color: #fff;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 6rem;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 1.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover .callouts__image {
+      mix-blend-mode: normal;
+      transform: rotate(10deg);
+      transition: all 0.3s ease-in-out;
+    }
 
     @include desktop {
-        flex-direction: row;
+      margin: initial;
+      width: 30%;
     }
+  }
 
-    & a {
-        color: initial;
-        text-decoration: none;
-    }
+  hr {
+    border: 0;
+    border-bottom: 1px dashed rgb(143, 143, 143);
+    background: #fcfcfc;
+    margin: 1rem auto;
+    width: 80%;
+  }
 
-    & a:visited {
-        color: initial;
-        text-decoration: none;
-    }
+  &__image {
+    border: 6px double rgba(148, 207, 124, 0.3);
+    border-radius: 50%;
+    height: 160px;
+    margin: 0 auto;
+    mix-blend-mode: luminosity;
+    object-fit: cover;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+    width: 160px;
+  }
 
-    & a:hover {
-        text-decoration: underline;
-    }
+  &__text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 
-    &__container {
-        background-color: #fff;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto 2rem auto;
-        padding: 1rem 1.5rem;
-        position: relative;
-        transition: all 0.3s ease-in-out;
-        width: 90%;
-
-        &:hover {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            transition: all 0.3s ease-in-out;
-        }
-
-        &:hover .callouts__image {
-            mix-blend-mode: normal;
-            transform: rotate(10deg);
-            transition: all 0.3s ease-in-out;
-        }
-
-        @include desktop {
-            margin: initial;
-            width: 30%;
-        }
-    }
-
-    hr {
-        border: 0;
-        border-bottom: 1px dashed rgb(143, 143, 143);
-        background: #fcfcfc;
-        margin: 1rem auto;
-        width: 80%;
-    }
-
-    &__image {
-        border: 6px double rgba(148, 207, 124, 0.3);
-        border-radius: 50%;
-        height: 160px;
-        margin: 0 auto;
-        mix-blend-mode: luminosity;
-        object-fit: cover;
-        transform: rotate(0deg);
-        transition: all 0.3s ease-in-out;
-        width: 160px;
-    }
-
-    &__text {
-        font-size: 0.8rem;
-        text-align: center;
-    }
-
-    &__title {
-        color: #45347d;
-        font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-        font-size: 1.5rem;
-        margin-top: 2rem;
-        text-align: center;
-        letter-spacing: -0.05rem;
-        line-height: 1.2;
-        text-transform: uppercase;
-    }
+  &__title {
+    color: #45347d;
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
 }
